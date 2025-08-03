@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contraseñas guardadas</title>
+</head>
+<body>
+    <h1>Listado de contraseñas</h1>
+    {% if data %}
+        <ul>
+        {% for entry in data %}
+            <li><strong>{{ entry.web }}</strong> - {{ entry.user }} - {{ entry.password }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay datos aún.</p>
+    {% endif %}
+
+</body>
+</html>
